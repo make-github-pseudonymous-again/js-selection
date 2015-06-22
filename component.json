@@ -1,11 +1,11 @@
 {
-	"description": "sorting code bricks for JavaScript",
+	"description": "selection code bricks for JavaScript",
 	"version": "5.0.4",
-	"repo": "aureooms/js-sort",
+	"repo": "aureooms/js-selection",
 	"scripts": [
-		"js/dist/sort.js"
+		"js/dist/selection.js"
 	],
-	"name": "aureooms-js-sort",
+	"name": "aureooms-js-selection",
 	"license": "AGPL-3.0",
-	"main": "js/dist/sort.js"
+	"main": "js/dist/selection.js"
 }

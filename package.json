@@ -14,25 +14,28 @@
 		"aureooms-js-search": "^0.0.4",
 		"aureooms-js-array": "^2.2.0"
 	},
-	"main": "js/dist/sort.js",
+	"main": "js/dist/selection.js",
 	"bugs": {
-		"url": "https://github.com/aureooms/js-sort/issues"
+		"url": "https://github.com/aureooms/js-selection/issues"
 	},
 	"license": "AGPL-3.0",
-	"homepage": "http://aureooms.github.io/js-sort/",
-	"description": "sorting code bricks for JavaScript",
+	"homepage": "http://aureooms.github.io/js-selection/",
+	"description": "selection code bricks for JavaScript",
 	"dependencies": {},
 	"keywords": [
 		"bricks",
+		"ender",
 		"javascript",
 		"js",
-		"order",
-		"sort",
-		"sorting"
+		"median",
+		"medians",
+		"of",
+		"quickselect",
+		"selection"
 	],
-	"name": "aureooms-js-sort",
+	"name": "aureooms-js-selection",
 	"repository": {
-		"url": "https://github.com/aureooms/js-sort.git",
+		"url": "https://github.com/aureooms/js-selection.git",
 		"type": "git"
 	},
 	"version": "5.0.4"
