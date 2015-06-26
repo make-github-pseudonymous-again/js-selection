@@ -158,45 +158,85 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         }
       ]
     }, {
-      "type": "file",
+      "type": "folder",
       "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-selection/js/src/multiselect.js",
-        "projectPath": "js/src/multiselect.js",
-        "targetPath": "multiselect",
-        "pageTitle": "multiselect",
-        "title": "multiselect"
+        "path": "multi",
+        "title": "multi"
       },
       "depth": 1,
-      "outline": []
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-selection/js/src/multi/multiselect.js",
+            "projectPath": "js/src/multi/multiselect.js",
+            "targetPath": "multi/multiselect",
+            "pageTitle": "multi/multiselect",
+            "title": "multiselect"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
     }, {
-      "type": "file",
+      "type": "folder",
       "data": {
-        "language": {
-          "nameMatchers": [".js"],
-          "pygmentsLexer": "javascript",
-          "multiLineComment": ["/*", "*", "*/"],
-          "singleLineComment": ["//"],
-          "ignorePrefix": "}",
-          "foldPrefix": "^",
-          "name": "JavaScript"
-        },
-        "sourcePath": "/home/aureooms/dev/js/js-selection/js/src/quickselect.js",
-        "projectPath": "js/src/quickselect.js",
-        "targetPath": "quickselect",
-        "pageTitle": "quickselect",
+        "path": "quickselect",
         "title": "quickselect"
       },
       "depth": 1,
-      "outline": []
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-selection/js/src/quickselect/single.js",
+            "projectPath": "js/src/quickselect/single.js",
+            "targetPath": "quickselect/single",
+            "pageTitle": "quickselect/single",
+            "title": "single"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-selection/js/src/quickselect/singletco.js",
+            "projectPath": "js/src/quickselect/singletco.js",
+            "targetPath": "quickselect/singletco",
+            "pageTitle": "quickselect/singletco",
+            "title": "singletco"
+          },
+          "depth": 2,
+          "outline": []
+        }
+      ]
     }
   ];
 
