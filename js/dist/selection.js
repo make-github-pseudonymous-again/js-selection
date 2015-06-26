@@ -6,7 +6,8 @@
 
 	var definition = function definition(exports, undefined) {
 
-		/* js/src/multiselect.js */
+		/* js/src/multi */
+		/* js/src/multi/multiselect.js */
 
 		var multiselect = function multiselect(partition, index) {
 
@@ -35,36 +36,56 @@
 
 		exports.multiselect = multiselect;
 
-		/* js/src/quickselect.js */
+		/* js/src/quickselect */
+		/* js/src/quickselect/single.js */
 
 		/**
    * Template for the recursive implementation of quickselect.
    *
    */
 
-		var quickselect = function quickselect(partition) {
+		var single = function single(partition) {
 
-			var quickselect = function quickselect(compare, a, i, j, k) {
+			var select = function select(compare, a, i, j, k) {
 
-				var p;
+				if (j - i < 2) return;
 
-				if (j - i < 2) {
-					return;
-				}
+				var p = partition(compare, a, i, j);
 
-				p = partition(compare, a, i, j);
+				if (k < p) select(compare, a, i, p, k);else if (k > p) select(compare, a, p + 1, j, k);
+			};
 
-				if (k < p) {
-					quickselect(compare, a, i, p, k);
-				} else if (k > p) {
-					quickselect(compare, a, p + 1, j, k);
+			return select;
+		};
+
+		exports.single = single;
+
+		/* js/src/quickselect/singletco.js */
+
+		/**
+   * Template for the recursive implementation of quickselect with explicit tail
+   * call optimization.
+   *
+   */
+
+		var singletco = function singletco(partition) {
+
+			var select = function select(compare, a, i, j, k) {
+
+				while (true) {
+
+					if (j - i < 2) return;
+
+					var p = partition(compare, a, i, j);
+
+					if (k < p) j = p;else if (k > p) i = p + 1;else return;
 				}
 			};
 
-			return quickselect;
+			return select;
 		};
 
-		exports.quickselect = quickselect;
+		exports.singletco = singletco;
 
 		return exports;
 	};

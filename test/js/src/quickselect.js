@@ -58,8 +58,10 @@ functools.chain( [ itertools.chain , itertools.list , functools.partial( functoo
 itertools.product( [
 
 [
-	[ "quickselect (hoare)", selection.quickselect( partition.hoare ) ] ,
-	[ "quickselect (lomuto)", selection.quickselect( partition.lomuto ) ]
+	[ "quickselect (hoare)", selection.single( partition.hoare ) ] ,
+	[ "quickselect (lomuto)", selection.single( partition.lomuto ) ] ,
+	[ "quickselect [tco] (hoare)", selection.singletco( partition.hoare ) ] ,
+	[ "quickselect [tco] (lomuto)", selection.singletco( partition.lomuto ) ]
 ],
 
 [

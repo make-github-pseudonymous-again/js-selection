@@ -122,5 +122,9 @@ a ; // [ . , 5 , . , . , . , . ]
 // but also
 
 /** recursive single pivot quickselect using Lomuto's partitioning algorithm */
-let select = selection.quickselect( partition.lomuto ) ;
+let select = selection.single( partition.lomuto ) ;
+
+/** with explicit tail call optimization */
+let select = selection.singletco( partition.hoare ) ;
+let select = selection.singletco( partition.lomuto ) ;
 ```
