@@ -1,9 +1,10 @@
-var all, util, array, random, compare, functools, itertools;
+var all, util, array, random, compare, partition, functools, itertools;
 
 util = require( "util" );
 array = require( "aureooms-js-array" );
 random = require( "aureooms-js-random" );
 compare = require( "aureooms-js-compare" );
+partition = require( "aureooms-js-partition" );
 functools = require( "aureooms-js-functools" );
 itertools = require( "aureooms-js-itertools" );
 
@@ -57,8 +58,8 @@ functools.chain( [ itertools.chain , itertools.list , functools.partial( functoo
 itertools.product( [
 
 [
-	[ "quickselect (hoare)", sort.__quickselect__( sort.hoare ) ],
-	[ "quickselect (lomuto)", sort.__quickselect__( sort.lomuto ) ]
+	[ "quickselect (hoare)", selection.quickselect( partition.hoare ) ] ,
+	[ "quickselect (lomuto)", selection.quickselect( partition.lomuto ) ]
 ],
 
 [

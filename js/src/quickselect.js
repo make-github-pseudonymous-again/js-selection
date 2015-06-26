@@ -4,7 +4,7 @@
  *
  */
 
-var __quickselect__ = function ( partition ) {
+var quickselect = function ( partition ) {
 
 	var quickselect = function ( compare, a, i, j, k ) {
 
@@ -28,4 +28,4 @@ var __quickselect__ = function ( partition ) {
 
 };
 
-exports.__quickselect__ = __quickselect__;
+exports.quickselect = quickselect;

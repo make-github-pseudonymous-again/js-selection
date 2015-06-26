@@ -1,10 +1,11 @@
-var all, util, array, search, random, compare, functools, itertools ;
+var all, util, array, search, random, compare, partition, functools, itertools ;
 
 util = require( "util" );
 array = require( "aureooms-js-array" );
 search = require( "aureooms-js-search" );
 random = require( "aureooms-js-random" );
 compare = require( "aureooms-js-compare" );
+partition = require( "aureooms-js-partition" );
 functools = require( "aureooms-js-functools" );
 itertools = require( "aureooms-js-itertools" );
 
@@ -22,7 +23,7 @@ all = function ( partitionname, partition, comparename, comparator, n, type ) {
 
 		// SETUP SELECT
 		index = functools.partial ( search.binarysearch, [compare.increasing] );
-		multiselect = sort.__multiselect__( partition, index );
+		multiselect = selection.multiselect( partition, index );
 
 		// SETUP REF ARRAY
 		ref = new type( n );
@@ -71,8 +72,8 @@ functools.chain( [ itertools.chain , itertools.list , functools.partial( functoo
 itertools.product( [
 
 [
-	[ "hoare", sort.hoare ],
-	[ "lomuto", sort.lomuto ]
+	[ "hoare", partition.hoare ],
+	[ "lomuto", partition.lomuto ]
 ],
 
 [
