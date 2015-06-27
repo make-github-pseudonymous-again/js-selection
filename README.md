@@ -2,7 +2,7 @@
 ==
 
 Selection code bricks for JavaScript. Parent is
-[aureooms/js-sort](http://aureooms.github.io/js-sort).
+[aureooms/js-sort](https://github.com/aureooms/js-sort).
 
 ```js
 let quickselect = selection.singletco( partition.hoare ) ;
