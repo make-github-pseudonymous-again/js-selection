@@ -1,6 +1,6 @@
 {
 	"description": "selection code bricks for JavaScript",
-	"version": "8.0.0",
+	"version": "8.0.1",
 	"repo": "aureooms/js-selection",
 	"scripts": [
 		"js/dist/selection.js"

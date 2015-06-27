@@ -39,7 +39,7 @@
 		"url": "https://github.com/aureooms/js-selection.git",
 		"type": "git"
 	},
-	"version": "8.0.0",
+	"version": "8.0.1",
 	"spm": {
 		"main": "js/dist/selection.js"
 	}
