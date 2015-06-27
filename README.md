@@ -1,10 +1,11 @@
 [js-selection](http://aureooms.github.io/js-selection)
 ==
 
-Selection code bricks for JavaScript.
+Selection code bricks for JavaScript. Parent is
+[aureooms/js-sort](http://aureooms.github.io/js-sort).
 
 ```js
-let select = selection.quickselect( partition.hoare ) ;
+let quickselect = selection.singletco( partition.hoare ) ;
 ```
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-selection.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-selection/master/LICENSE)
