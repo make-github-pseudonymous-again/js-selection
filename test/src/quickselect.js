@@ -5,7 +5,7 @@ import random from "aureooms-js-random" ;
 import compare from "aureooms-js-compare" ;
 import partition from "aureooms-js-partition" ;
 import functools from "aureooms-js-functools" ;
-import itertools from "aureooms-js-itertools" ;
+import * as itertools from "aureooms-js-itertools" ;
 
 import * as selection from '../../src' ;
 
@@ -29,7 +29,7 @@ const all = function ( quickselectname, quickselect, comparename, compare, n, ty
 		while ( i-- ) {
 			random.shuffle( a, 0, n );
 			quickselect( compare, a, 0, n, i );
-			deepEqual( a[i], ref[i], "select #" + i );
+			t.deepEqual( a[i], ref[i], "select #" + i );
 		}
 
 		t.deepEqual( a.length, n, "check length" );

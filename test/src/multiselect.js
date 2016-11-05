@@ -6,13 +6,13 @@ import random from "aureooms-js-random" ;
 import compare from "aureooms-js-compare" ;
 import partition from "aureooms-js-partition" ;
 import functools from "aureooms-js-functools" ;
-import itertools from "aureooms-js-itertools" ;
+import * as itertools from "aureooms-js-itertools" ;
 
 import * as selection from '../../src' ;
 
 const all = function ( partitionname, partition, comparename, comparator, n, type ) {
 
-	const title = `multiselect ${paritionname} (new ${type.name}(${n}), ${comparename})`
+	const title = `multiselect ${partitionname} (new ${type.name}(${n}), ${comparename})`
 
 	test( title, t => {
 
@@ -43,7 +43,7 @@ const all = function ( partitionname, partition, comparename, comparator, n, typ
 		multiselect( comparator, a, 0, n, k, 0, len );
 
 		while ( len-- ) {
-			deepEqual( a[k[len]], ref[k[len]], "select #" + k[len] );
+			t.deepEqual( a[k[len]], ref[k[len]], "select #" + k[len] );
 		}
 
 		t.deepEqual( a.length, n, "check length" );
