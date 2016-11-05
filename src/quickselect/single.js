@@ -4,13 +4,13 @@
  *
  */
 
-let single = function ( partition ) {
+export function single ( partition ) {
 
-	let select = function ( compare , a , i , j , k ) {
+	const select = function ( compare , a , i , j , k ) {
 
 		if ( j - i < 2 ) return ;
 
-		let p = partition( compare , a , i , j ) ;
+		const p = partition( compare , a , i , j ) ;
 
 		if      ( k < p ) select( compare , a ,   i   , p , k ) ;
 		else if ( k > p ) select( compare , a , p + 1 , j , k ) ;
@@ -19,6 +19,4 @@ let single = function ( partition ) {
 
 	return select ;
 
-} ;
-
-exports.single = single ;
+}

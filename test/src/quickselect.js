@@ -1,43 +1,38 @@
-var all, util, array, random, compare, partition, functools, itertools;
+import test from 'ava' ;
 
-util = require( "util" );
-array = require( "aureooms-js-array" );
-random = require( "aureooms-js-random" );
-compare = require( "aureooms-js-compare" );
-partition = require( "aureooms-js-partition" );
-functools = require( "aureooms-js-functools" );
-itertools = require( "aureooms-js-itertools" );
+import array from "aureooms-js-array" ;
+import random from "aureooms-js-random" ;
+import compare from "aureooms-js-compare" ;
+import partition from "aureooms-js-partition" ;
+import functools from "aureooms-js-functools" ;
+import itertools from "aureooms-js-itertools" ;
 
-all = function ( quickselectname, quickselect, comparename, compare, n, type ) {
+import * as selection from '../../src' ;
 
-	var title;
+const all = function ( quickselectname, quickselect, comparename, compare, n, type ) {
 
-	title = util.format( "%s (new %s(%d), %s)", quickselectname, type.name, n, comparename );
+	const title = `${quickselectname} (new ${type.name}(${n}), ${comparename})`
 
-	console.log( title );
-
-	test( title, function () {
-
-		var a, i, ref;
+	test( title, t => {
 
 		// SETUP REF ARRAY
-		ref = new type( n );
+		const ref = new type( n );
 		array.iota(ref, 0, n, 0);
 		array.sort( compare, ref );
 
 		// SETUP TEST ARRAY
-		a = new type( n );
+		const a = new type( n );
 		array.copy( ref, 0, n, a, 0 );
 
 		// TEST ALL INDEX SELECTION
-		i = a.length;
+		let i = a.length;
 		while ( i-- ) {
 			random.shuffle( a, 0, n );
 			quickselect( compare, a, 0, n, i );
 			deepEqual( a[i], ref[i], "select #" + i );
 		}
 
-		deepEqual( a.length, n, "check length" );
+		t.deepEqual( a.length, n, "check length" );
 	});
 };
 

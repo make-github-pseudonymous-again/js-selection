@@ -1,5 +1,5 @@
 
-const deterministic = function ( _select , partition , medianoffive ) {
+export function deterministic ( _select , partition , medianoffive ) {
 
 	let S ;
 
@@ -17,6 +17,4 @@ const deterministic = function ( _select , partition , medianoffive ) {
 
 	return [ S , P ] ;
 
-} ;
-
-exports.deterministic = deterministic ;
+}

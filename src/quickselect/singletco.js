@@ -5,15 +5,15 @@
  *
  */
 
-let singletco = function ( partition ) {
+export function singletco ( partition ) {
 
-	let select = function ( compare , a , i , j , k ) {
+	const select = function ( compare , a , i , j , k ) {
 
 		while ( true ) {
 
 			if ( j - i < 2 ) return ;
 
-			let p = partition( compare , a , i , j ) ;
+			const p = partition( compare , a , i , j ) ;
 
 			if      ( k < p ) j = p ;
 			else if ( k > p ) i = p + 1 ;
@@ -25,6 +25,4 @@ let singletco = function ( partition ) {
 
 	return select ;
 
-} ;
-
-exports.singletco = singletco ;
+}

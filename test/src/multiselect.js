@@ -1,46 +1,41 @@
-var all, util, array, search, random, compare, partition, functools, itertools ;
+import test from 'ava' ;
 
-util = require( "util" );
-array = require( "aureooms-js-array" );
-search = require( "aureooms-js-search" );
-random = require( "aureooms-js-random" );
-compare = require( "aureooms-js-compare" );
-partition = require( "aureooms-js-partition" );
-functools = require( "aureooms-js-functools" );
-itertools = require( "aureooms-js-itertools" );
+import array from "aureooms-js-array" ;
+import search from "aureooms-js-search" ;
+import random from "aureooms-js-random" ;
+import compare from "aureooms-js-compare" ;
+import partition from "aureooms-js-partition" ;
+import functools from "aureooms-js-functools" ;
+import itertools from "aureooms-js-itertools" ;
 
-all = function ( partitionname, partition, comparename, comparator, n, type ) {
+import * as selection from '../../src' ;
 
-	var title;
+const all = function ( partitionname, partition, comparename, comparator, n, type ) {
 
-	title = util.format( "multiselect %s (new %s(%d), %s)", partitionname, type.name, n, comparename );
+	const title = `multiselect ${paritionname} (new ${type.name}(${n}), ${comparename})`
 
-	console.log( title );
-
-	test( title, function () {
-
-		var index, multiselect, ref, a, i, len, k;
+	test( title, t => {
 
 		// SETUP SELECT
-		index = functools.partial ( search.binarysearch, [compare.increasing] );
-		multiselect = selection.multiselect( partition, index );
+		const index = functools.partial ( search.binarysearch, [compare.increasing] );
+		const multiselect = selection.multiselect( partition, index );
 
 		// SETUP REF ARRAY
-		ref = new type( n );
+		const ref = new type( n );
 		array.iota( ref, 0, n, 0 );
 		random.shuffle( ref, 0, n );
 		array.sort( comparator, ref );
 
 		// SETUP TEST ARRAY
-		a = new type( n );
+		const a = new type( n );
 		array.copy( ref, 0, n, a, 0 );
 
 		// SELECT A SAMPLE OF THE INDEXES IN *a*
-		i = a.length;
+		const i = a.length;
 
-		len = random.randint( 0, i + 1 );
+		let len = random.randint( 0, i + 1 );
 		random.sample( len, a, 0, n );
-		k = new type( len );
+		const k = new type( len );
 		array.copy( a, 0, len, k, 0 );
 		array.sort( compare.increasing, k );
 
@@ -51,7 +46,7 @@ all = function ( partitionname, partition, comparename, comparator, n, type ) {
 			deepEqual( a[k[len]], ref[k[len]], "select #" + k[len] );
 		}
 
-		deepEqual( a.length, n, "check length" );
+		t.deepEqual( a.length, n, "check length" );
 	});
 };
 

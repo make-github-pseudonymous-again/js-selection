@@ -1,4 +1,4 @@
-const _medianofmedians = function ( median5 ) {
+export function _medianofmedians ( median5 ) {
 
 	const medianofmedians = function ( select , compare , a , i , j ) {
 
@@ -28,6 +28,6 @@ const _medianofmedians = function ( median5 ) {
 
 	} ;
 
-} ;
+	return medianofmedians ;
 
-exports.medianofmedians = medianofmedians ;
+}
