@@ -1,6 +1,6 @@
 ```js
-let partition = require( "aureooms-js-partition" ) ;
-let compare = require( "aureooms-js-compare" ) ;
+let partition = require( "@aureooms/js-partition" ) ;
+let compare = require( "@aureooms/js-compare" ) ;
 
 /** recursive single pivot quickselect using Hoare's partitioning algorithm*/
 let select = selection.single( partition.hoare ) ;
