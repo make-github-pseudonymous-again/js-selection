@@ -1,10 +1,10 @@
 import test from 'ava' ;
 
-import array from "@aureooms/js-array" ;
-import random from "@aureooms/js-random" ;
-import compare from "@aureooms/js-compare" ;
-import partition from "@aureooms/js-partition" ;
-import functools from "@aureooms/js-functools" ;
+import * as array from "@aureooms/js-array" ;
+import * as random from "@aureooms/js-random" ;
+import * as compare from "@aureooms/js-compare" ;
+import { hoare , lomuto } from "@aureooms/js-partition" ;
+import * as functools from "@aureooms/js-functools" ;
 import * as itertools from "@aureooms/js-itertools" ;
 
 import * as selection from '../../src' ;
@@ -53,10 +53,10 @@ functools.chain( [ itertools.chain , itertools.list , functools.partial( functoo
 itertools.product( [
 
 [
-	[ "quickselect (hoare)", selection.single( partition.hoare ) ] ,
-	[ "quickselect (lomuto)", selection.single( partition.lomuto ) ] ,
-	[ "quickselect [tco] (hoare)", selection.singletco( partition.hoare ) ] ,
-	[ "quickselect [tco] (lomuto)", selection.singletco( partition.lomuto ) ]
+	[ "quickselect (hoare)", selection.single( hoare ) ] ,
+	[ "quickselect (lomuto)", selection.single( lomuto ) ] ,
+	[ "quickselect [tco] (hoare)", selection.singletco( hoare ) ] ,
+	[ "quickselect [tco] (lomuto)", selection.singletco( lomuto ) ]
 ],
 
 [

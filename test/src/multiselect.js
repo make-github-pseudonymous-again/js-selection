@@ -1,11 +1,11 @@
 import test from 'ava' ;
 
-import array from "@aureooms/js-array" ;
-import search from "@aureooms/js-search" ;
-import random from "@aureooms/js-random" ;
-import compare from "@aureooms/js-compare" ;
-import partition from "@aureooms/js-partition" ;
-import functools from "@aureooms/js-functools" ;
+import * as array from "@aureooms/js-array" ;
+import * as search from "@aureooms/js-search" ;
+import * as random from "@aureooms/js-random" ;
+import * as compare from "@aureooms/js-compare" ;
+import { hoare , lomuto } from "@aureooms/js-partition" ;
+import * as functools from "@aureooms/js-functools" ;
 import * as itertools from "@aureooms/js-itertools" ;
 
 import * as selection from '../../src' ;
@@ -67,8 +67,8 @@ functools.chain( [ itertools.chain , itertools.list , functools.partial( functoo
 itertools.product( [
 
 [
-	[ "hoare", partition.hoare ],
-	[ "lomuto", partition.lomuto ]
+	[ "hoare", hoare ],
+	[ "lomuto", lomuto ]
 ],
 
 [
