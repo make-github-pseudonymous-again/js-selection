@@ -8,7 +8,7 @@ import 'babel-polyfill' ;
 
 Then
 ```js
-const measure = require( 'aureooms-js-selection' ) ;
+const measure = require( '@aureooms/js-selection' ) ;
 // or
-import measure from 'aureooms-js-selection' ;
+import measure from '@aureooms/js-selection' ;
 ```
