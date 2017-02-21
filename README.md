@@ -1,8 +1,8 @@
-[js-selection](http://aureooms.github.io/js-selection)
+[@aureooms/js-selection](http://aureooms.github.io/js-selection)
 ==
 
-Selection algorithms for JavaScript. Parent is
-[aureooms/js-sort](https://github.com/aureooms/js-sort).
+Selection algorithms for JavaScript.
+Parent is [@aureooms/js-sort](https://github.com/aureooms/js-sort).
 
 ```js
 let quickselect = selection.singletco( partition.hoare ) ;
