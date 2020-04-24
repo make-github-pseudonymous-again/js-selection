@@ -1,3 +1,4 @@
+# Examples
 ```js
 let partition = require( "@aureooms/js-partition" ) ;
 let compare = require( "@aureooms/js-compare" ) ;
