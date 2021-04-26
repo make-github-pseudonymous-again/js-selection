@@ -24,7 +24,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-selection/issues"
+    "url": "https://github.com/make-github-pseudonymous-again/js-selection/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -67,7 +67,7 @@
   "license": "AGPL-3.0",
   "main": "lib/index.js",
   "repository": {
-    "url": "https://github.com/aureooms/js-selection.git",
+    "url": "https://github.com/make-github-pseudonymous-again/js-selection.git",
     "type": "git"
   },
   "scripts": {
